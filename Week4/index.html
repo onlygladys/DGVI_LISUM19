@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:rgb(0,0,0)">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>  <font size = "+3" </font>Used Car price prediction</h2>
+            <h3><font size = "+1"</font>Year </h3><input id="first" name="Year" required="required" placeholder="yyyy" >
+            <h3><font size = "+1"</font>Present price </h3><input id="second" name="Present_Price" required="required" placeholder="in lakhs" >
+            <h3><font size = "+1"</font>Kilometers driven</h3><input id="third" name="Kms_Driven" required="required" placeholder="Kms travelled" >
+            <h3><font size = "+1"</font>Age of the car</h3><input id="fourth" name="Age of car" required="required" placeholder="Car age in years" >
+            <h3><font size = "+1"</font>Transmission type</h3><input id="sixth" name="Transmission" required="required" placeholder="Manual/Automatic" >
+
+            </select>
+            <br><br><button id="fifth" type="submit">Calculate Car Price</button>
+            <br>
+        </form>
+
+      <br><br><h3><font size = "+3" </font> {{ prediction_text }}<h3>
+    </div>
+
+    <style>
+        body {
+            background-color: rgba(255,255,128,.5);
+            text-align: center;
+            padding: 0px;
+            border-spacing: 0;
+            row-gap: 0;
+            column-gap: 0;
+            gap:0;
+            
+        }
+
+        input::placeholder {
+             font-size:15px;
+             opacity: 0.5;
+             color: gray;
+             font-style: italic;
+       }
+       #first {
+            
+            width: 200px;
+            height:30px;
+            font-size: +1;
+            text-align: center;
+            padding: 0%;
+            border-spacing: 0;
+        }
+        #second {
+            height:30px;
+            width:200px;
+            font-size: +1;
+            text-align: center;
+            padding: 0%;
+            border-spacing: 0;
+            row-gap: 5;
+            column-gap: 5;
+        }
+        #third {
+            
+            height: 30px;
+            width:200px;
+            font-size: +1;
+            text-align: center;
+            padding: 0%;
+            border-spacing: 0;
+            column-gap: 5;
+            row-gap: 5;
+             } 
+         #fourth  {
+            height: 30px;
+            width:200px;
+            font-size: +1;
+            text-align: center;
+            padding: 0%;
+            border-spacing: 0;
+        }
+        #fifth {
+            width: 260px;
+            height: 50px;
+            text-align: center;
+            font-size: +2;
+            margin-top:30px;
+            font:bolder;
+            font-weight: 500px;
+            padding: 0%;
+            border-spacing: 5px;
+
+        }
+        #fifth:hover {
+            background-color: white
+        }
+        #sixth  {
+            height: 30px;
+            width:200px;
+            font-size: +1;
+            text-align: center;
+            padding: 0%;
+            border-spacing: 0;
+        }
+        
+    </style>
+</body>
+
+</html>
